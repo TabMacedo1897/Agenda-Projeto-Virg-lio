@@ -43,18 +43,22 @@ button {
 }
 
 #container {
-  width: 770px;
+  width: 100%;
+  max-width: 600px; /* Adicionado limite máximo para telas de até 600 pixels */
+  box-sizing: border-box; /* Garante que a largura inclua padding e bordas */
 }
 
 #diasSemana {
   width: 100%;
   display: flex;
   color: var(--color-weekdays);
+  flex-wrap: wrap; /* Permite que os dias da semana se ajustem em telas pequenas */
 }
 
 #diasSemana div {
-  width: 100px;
+  width: 100%;
   padding: 10px;
+  box-sizing: border-box; /* Garante que a largura inclua padding e bordas */
 }
 
 #calendario {
@@ -65,7 +69,7 @@ button {
 }
 
 .dia {
-  width: 100px;
+  width: calc(33.33% - 10px); /* Ajusta a largura para 33.33% com espaço entre os dias */
   padding: 10px;
   height: 100px;
   cursor: pointer;
@@ -111,13 +115,16 @@ button {
   background-color: var(--modal-event);
   box-shadow: 0px 0px 3px black;
   border-radius: 5px;
-  width: 350px;
+  width: 100%;
+  max-width: 600px; /* Adicionado limite máximo para telas de até 600 pixels */
   top: 100px;
-  left: calc(50% - 175px);
+  left: 0;
+  right: 0;
+  margin: auto;
   position: absolute;
   font-family: sans-serif;
 }
-#modalNovoEvento h2{
+#modalNovoEvento h2 {
   color: white;
 }
 
@@ -149,10 +156,10 @@ button {
 #textoEvento {
   font-size: 14px;
 }
-#modalDeleteEvento h2{
+#modalDeleteEvento h2 {
   color: white;
 }
-#textoEvento{
+#textoEvento {
   color: white;
 }
 #modalBackDrop {
