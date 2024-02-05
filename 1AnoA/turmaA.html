@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link rel="stylesheet" href="./turmaA.css">
+    <script defer src="turmaA.js"></script>
+</head>
+<body>
+ <div id="container">
+    <!-- Cabeçalho do Calendário -->
+    <div id="header">
+        <div id="displayMes"></div>
+        <div>
+            <button id="botaoVoltar">Voltar</button>
+            <button id="botaoProximo">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Dias da semana -->
+    <div id="diasSemana">
+        <div>Domingo</div>
+        <div>Segunda-feira</div>
+        <div>Terça-feira</div>
+        <div>Quarta-feira</div>
+        <div>Quinta-feira</div>
+        <div>Sexta-feira</div>
+        <div>Sábado</div>
+    </div>
+
+    <!-- Calendário dinâmico -->
+    <div id="calendario"></div>
+
+    <!-- Criar novo evento -->
+
+    <div id="modalNovoEvento">
+        <h2>Novo Evento</h2>
+
+        <input id="tituloCaixaEvento" placeholder="Nome do Evento"/>
+    
+        <button id="botaoSalvar"> Salvar</button>
+        <button id="botaoCancelar">Cancelar</button> 
+    </div>
+
+    <!-- Deletar evento -->
+
+    <div id="modalDeleteEvento">
+        <h2>Evento</h2>
+    
+        <div id="textoEvento"></div><br>
+    
+        <button id="botaoDeletar">Deletar</button>
+        <button id="botaoFechar">Fechar</button>
+      </div>
+ </div>
+    
+</body>
+</html>
